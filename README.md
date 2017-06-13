@@ -31,7 +31,7 @@ this was the easiest and most elegant solution, so we chose it.
 
 So we wrote a small node.js script. Each time we build one of our packages, it updates the `dist` folder on every `node_modules` folder that uses it. This is not the best solution, but it effectively solves the npm update issue when developing locally.
 
-[Here]() you can download the script; I hope you will find it usefull for your project.
+[Here](https://gist.github.com/adica/0ceddc17cbfc4c94b299d4e76a6092aa) you can download the script; I hope you will find it usefull for your project.
 
 Notice: the npm team has told us that a better solution for working locally with many dependencies should be available soon during 2017 - I'm surely waiting for it.
 
