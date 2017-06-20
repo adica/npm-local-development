@@ -2,7 +2,33 @@
 
 Recently, I've been asked to split a very big client side project into small chunks of code. The purpose was to isolate sections of the app, to make the code chunks smaller and more readable, and to enable scaling the development process by letting many developers working simoulatnously on separated sections of the code.
 
-The way our packages are designed is that every package exports it's isolated code into a `dist` folder (`app.min.js` and `app.css` files), and the main orchestrator package uses those files to build the web page.
+The way our packages are designed is that every package exports it's isolated code into a `dist` folder (`app.js` and `app.css` files), and the main orchestrator package uses those files to build the web page.
+
+```
+|───package-a
+|   |
+|   └───dist
+|       | app.js
+|       | app.css
+|
+|───package-b
+|   |
+|   └───dist
+|       | app.js
+|       | app.css
+|
+|───orchestrator
+|   │
+|   └───node_modules
+|       │
+|       └───package-a/dist
+|       |   |  app.js
+|       |   |  app.css
+|       |
+|       └───package-b/dist
+│           |  app.js
+|           |  app.css
+```
 
 At first I split the code into separate Git repositories and run [npm init](https://docs.npmjs.com/cli/init) for each one of them, to make it a valid npm package.
 
