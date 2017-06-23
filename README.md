@@ -18,7 +18,9 @@ The way our packages are designed is that every package exports it's isolated co
 |       | app.css
 |
 |───orchestrator
-|   │
+|   │ app.bundle.js  //bundle of 'node_modules/package-a' and 'node_modules/package-b'
+|   | app.bundle.css //bundle of 'node_modules/package-a' and 'node_modules/package-b'
+|   |
 |   └───node_modules
 |       │
 |       └───package-a/dist
